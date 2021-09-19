@@ -1,7 +1,4 @@
-
-
 defmodule Kata do
-
   def find_outlier(integers) do
     majorityis(integers) |> outliner(integers)
   end

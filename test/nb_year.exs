@@ -1,5 +1,3 @@
-
-
 defmodule Solution do
   def nb_year(p0, percent, aug, p) do
     nb_year(p0, percent, aug, p, 0)
@@ -9,7 +7,7 @@ defmodule Solution do
 
   defp nb_year(p0, percent, aug, p, year) do
     population_at_the_end_of_year(p0, percent, aug)
-      |> nb_year(percent, aug, p, 1 + year)
+    |> nb_year(percent, aug, p, 1 + year)
   end
 
   defp population_at_the_end_of_year(p0, percent, aug) do
