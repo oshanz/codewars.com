@@ -20,6 +20,13 @@ defmodule Funct do
     sum = &(&1 + &2)
     sum.(x, y)
   end
+
+  def pattern_matching_functions() do
+    fn
+      a, b when a > b -> a + b
+      a, b -> a * b
+    end
+  end
 end
 
 defmodule FuncTest do
@@ -36,5 +43,10 @@ defmodule FuncTest do
 
   test "sum anonym" do
     assert Funct.sum_anon(3, 5) == 8
+  end
+
+  test "pattern matching fucntion" do
+    assert Funct.pattern_matching_functions().(8, 3) == 11
+    assert Funct.pattern_matching_functions().(4, 5) == 20
   end
 end
